@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Premium Sub Motor & Copper Spare Parts Shop — Submersible motors, copper winding wire, capacitors, pump accessories, and more.">
+  <title>SMK Motor Spare Parts — Admin Console</title>
+  <base href="/admin/">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎛️</text></svg>">
+</head>
+
+<body>
+  <div id="app">
+    <nav class="navbar" id="navbar">
+      <div class="navbar-brand" onclick="window.router.navigate('/')">
+        <span class="logo">S</span>
+        <span>SMK <span style="color:var(--amber)">Admin</span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><button class="nav-link" data-page="admin" id="nav-admin">🏠 Dashboard</button></li>
+        <li><button class="nav-link" data-page="custom-dashboard" id="nav-custom-dashboard">📈 Custom Dashboard</button></li>
+        <li><button class="nav-link" data-page="inventory" id="nav-inventory">📦 Inventory</button></li>
+        <li><button class="nav-link" data-page="orders" id="nav-orders">🚚 Orders</button></li>
+        <li><button class="nav-link" data-page="analytics" id="nav-analytics">📊 Analytics</button></li>
+        <li><button class="nav-link" data-page="billing" id="nav-billing">📜 Billing</button></li>
+        <li><button class="nav-link" data-page="customers" id="nav-customers">👥 Customers</button></li>
+        <li><button class="nav-link" data-page="enquiries" id="nav-enquiries">💬 Enquiries</button></li>
+        <li><button class="nav-link nav-lock-btn" id="nav-lock" title="Lock Screen" onclick="ScreenLock.lock()">🔒 Lock</button></li>
+        <li><button class="nav-link" data-page="auth" id="nav-auth">Login</button></li>
+      </ul>
+    </nav>
+
+    <main class="main-content" id="page-content">
+      <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+      </div>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="footer-content">
+        <div>
+          <h4>SMK Motor Spare Parts</h4>
+          <p>Your trusted partner for submersible motor parts, copper winding wire, and pump accessories since 2005.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="#" onclick="window.router.navigate('/');return false;">Dashboard</a>
+          <a href="#" onclick="window.router.navigate('/inventory');return false;">Inventory</a>
+          <a href="#" onclick="window.router.navigate('/orders');return false;">Orders</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>📞 +91 90807 99320</p>
+          <p>📧 smkmotorspares@gmail.com</p>
+          <p>📍 Near Old Bus Stand, Aruppukottai – 626 101</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 SMK Motor Spare Parts — Admin Console. All rights reserved.</div>
+    </footer>
+
+    <div class="toast-container" id="toast-container"></div>
+  </div>
+
+  <!-- Screen Lock Overlay -->
+  <div id="screen-lock-overlay" class="screen-lock-overlay">
+    <div class="screen-lock-card">
+      <div id="lock-body" class="lock-body"></div>
+    </div>
+  </div>
+
+  <!-- Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Firebase SDK (Compat Version for simple integration) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+
+  <script src="js/api.js?v=1.1"></script>
+  <script src="js/components.js?v=1.1"></script>
+  <script src="js/pages/auth.js?v=1.1"></script>
+  <script src="js/pages/admin.js?v=1.1"></script>
+  <script src="js/pages/inventory.js?v=1.1"></script>
+  <script src="js/pages/orders.js?v=1.1"></script>
+  <script src="js/pages/billing.js?v=1.1"></script>
+  <script src="js/pages/analytics.js?v=1.1"></script>
+  <script src="js/pages/customers.js?v=1.1"></script>
+  <script src="js/pages/dashboard.js?v=1.1"></script>
+  <script src="js/pages/enquiries.js?v=1.1"></script>
+  <script src="js/screen-lock.js?v=1.0"></script>
+  <script src="js/app.js?v=1.1"></script>
+</body>
+
+</html>

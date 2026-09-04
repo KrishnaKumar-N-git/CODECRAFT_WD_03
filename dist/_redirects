@@ -1,0 +1,9 @@
+# Netlify Redirects Configuration for SMK Motor Spare Parts
+# Redirect API calls to production backend if set up
+# /api/*  https://your-backend.onrender.com/api/:splat  200
+
+# Admin SPA Routing
+/admin/*  /admin/index.html  200
+
+# Customer Storefront SPA Routing
+/*  /index.html  200

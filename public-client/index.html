@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SMK Motor Spare Parts — Submersible motors, copper winding wire, capacitors, pump accessories. Near Old Bus Stand, Aruppukottai.">
+  <title>SMK Motor Spare Parts — Aruppukottai</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+</head>
+<body>
+  <div id="app">
+    <nav class="navbar" id="navbar">
+      <div class="navbar-brand" onclick="window.router.navigate('/')">
+        <div class="logo">S</div>
+        <span>SMK <span style="color:var(--amber)">Motor Spare Parts</span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><button class="nav-link active" data-page="home" id="nav-home">Home</button></li>
+        <li><button class="nav-link" data-page="products" id="nav-products">Products</button></li>
+        <li><button class="nav-link" data-page="cart" id="nav-cart" style="position:relative">
+          🛒 Cart 
+          <span class="cart-badge" id="cart-count" style="display:none">0</span>
+        </button></li>
+        <li><button class="nav-link btn btn-secondary btn-sm" data-page="auth" id="nav-auth" style="margin-left:12px;padding:6px 16px;border-radius:var(--radius-full)">📦 Orders / Track</button></li>
+      </ul>
+    </nav>
+
+    <main class="main-content" id="page-content">
+      <div class="loading-overlay"><div class="loading-spinner"></div></div>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">
+            <div class="logo">S</div>
+            <span>SMK <span style="color:var(--amber)">Motor Spare Parts</span></span>
+          </div>
+          <p style="max-width:300px;margin-top:12px;color:var(--text-muted);font-size:0.82rem;line-height:1.7">Your trusted wholesale partner for submersible motors, copper winding wire, capacitors and pump accessories. Serving since 2005.</p>
+          <div class="footer-whatsapp">
+            <a href="https://wa.me/919080799320" target="_blank">💬 WhatsApp Us</a>
+          </div>
+        </div>
+        <div>
+          <h4>Products</h4>
+          <a href="#" onclick="window.router.navigate('/products');return false;">Submersible Motors</a>
+          <a href="#" onclick="window.router.navigate('/products');return false;">Copper Wire</a>
+          <a href="#" onclick="window.router.navigate('/products');return false;">Capacitors</a>
+          <a href="#" onclick="window.router.navigate('/products');return false;">Pump Accessories</a>
+          <a href="#" onclick="window.router.navigate('/products');return false;">Control Panels</a>
+        </div>
+        <div>
+          <h4>My Account</h4>
+          <a href="#" onclick="window.router.navigate('/my-orders');return false;">Track Order</a>
+          <a href="#" onclick="window.router.navigate('/cart');return false;">My Cart</a>
+          <a href="#" onclick="window.router.navigate('/auth');return false;">Login / Register</a>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <p>📞 +91 90807 99320</p>
+          <p>📧 smkmotorspares@gmail.com</p>
+          <p style="margin-top:10px;line-height:1.8">📍 SMK Motor Spare Parts<br>Near Old Bus Stand<br>Aruppukottai – 626 101<br>Tamil Nadu</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 SMK Motor Spare Parts, Aruppukottai. All rights reserved.</div>
+    </footer>
+
+    <div class="toast-container" id="toast-container"></div>
+  </div>
+
+  <!-- Firebase SDK (Compat Version for ease of integration) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="/js/firebase-config.js"></script>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/pages/home.js"></script>
+  <script src="/js/pages/products.js"></script>
+  <script src="/js/pages/productDetail.js"></script>
+  <script src="/js/pages/cart.js"></script>
+  <script src="/js/pages/checkout.js"></script>
+  <script src="/js/pages/auth.js"></script>
+  <script src="/js/pages/orders.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/support-widget.js"></script>
+</body>
+</html>
